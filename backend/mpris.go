@@ -22,6 +22,7 @@ var (
 	_ types.OrgMprisMediaPlayer2Adapter                 = (*MPRISHandler)(nil)
 	_ types.OrgMprisMediaPlayer2PlayerAdapter           = (*MPRISHandler)(nil)
 	_ types.OrgMprisMediaPlayer2PlayerAdapterLoopStatus = (*MPRISHandler)(nil)
+	_ types.OrgMprisMediaPlayer2PlayerAdapterShuffle    = (*MPRISHandler)(nil)
 )
 
 var errNotSupported = errors.New("not supported")
@@ -226,6 +227,8 @@ func (m *MPRISHandler) PlaybackStatus() (types.PlaybackStatus, error) {
 	return "", errors.New("unknown playback status")
 }
 
+// OrgMprisMediaPlayer2PlayerAdapterLoopStatus implementation
+
 func (m *MPRISHandler) LoopStatus() (types.LoopStatus, error) {
 	switch m.pm.GetLoopMode() {
 	case LoopAll:
@@ -249,6 +252,17 @@ func (m *MPRISHandler) SetLoopStatus(status types.LoopStatus) error {
 	default:
 		return errors.New("unknown loop status")
 	}
+	return nil
+}
+
+// OrgMprisMediaPlayer2PlayerAdapterShuffle implementation
+
+func (m *MPRISHandler) Shuffle() (bool, error) {
+	return m.pm.IsShuffle(), nil
+}
+
+func (m *MPRISHandler) SetShuffle(shuffle bool) error {
+	m.pm.SetShuffle(shuffle)
 	return nil
 }
 
