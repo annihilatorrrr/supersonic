@@ -5,6 +5,7 @@ import (
 	"strconv"
 
 	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/dialog"
 	"fyne.io/fyne/v2/lang"
 	"fyne.io/fyne/v2/layout"
@@ -21,7 +22,7 @@ import (
 func (m *Controller) DoAddTracksToPlaylistWorkflow(trackIDs []string) {
 	sp := dialogs.NewSelectPlaylistDialog(m.App.ServerManager.Server, m.App.ImageManager,
 		m.App.ServerManager.LoggedInUser, m.App.Config.Application.AddToPlaylistSkipDuplicates)
-	pop := widget.NewModalPopUp(sp.SearchDialog, m.MainWindow.Canvas())
+	pop := widget.NewModalPopUp(container.NewPadded(sp.SearchDialog), m.MainWindow.Canvas())
 	sp.SetOnDismiss(func() {
 		pop.Hide()
 		m.doModalClosed()
@@ -102,7 +103,7 @@ func (m *Controller) DoAddTracksToPlaylistWorkflow(trackIDs []string) {
 func (m *Controller) DoEditPlaylistWorkflow(playlist *mediaprovider.Playlist) {
 	canMakePublic := m.App.ServerManager.Server.CanMakePublicPlaylist()
 	dlg := dialogs.NewEditPlaylistDialog(playlist, canMakePublic)
-	pop := widget.NewModalPopUp(dlg, m.MainWindow.Canvas())
+	pop := widget.NewModalPopUp(container.NewPadded(dlg), m.MainWindow.Canvas())
 	m.ClosePopUpOnEscape(pop)
 	dlg.OnCanceled = func() {
 		pop.Hide()
@@ -152,7 +153,7 @@ func (m *Controller) DoEditPlaylistWorkflow(playlist *mediaprovider.Playlist) {
 func (m *Controller) DoCreatePlaylistWorkflow() {
 	canMakePublic := m.App.ServerManager.Server.CanMakePublicPlaylist()
 	dlg := dialogs.NewCreatePlaylistDialog(canMakePublic)
-	pop := widget.NewModalPopUp(dlg, m.MainWindow.Canvas())
+	pop := widget.NewModalPopUp(container.NewPadded(dlg), m.MainWindow.Canvas())
 	m.ClosePopUpOnEscape(pop)
 	dlg.OnCanceled = func() {
 		pop.Hide()

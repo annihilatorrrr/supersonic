@@ -96,7 +96,11 @@ func (a *AlbumFilterButton) showFilterDialog() {
 	if a.dialog == nil {
 		filterDlg := NewAlbumFilterPopup(a)
 		filterDlg.OnChanged = a.onFilterChanged
-		a.dialog = widget.NewPopUp(filterDlg, fyne.CurrentApp().Driver().CanvasForObject(a))
+		cnv := fyne.CurrentApp().Driver().CanvasForObject(a)
+		if cnv == nil {
+			return
+		}
+		a.dialog = widget.NewPopUp(container.NewPadded(filterDlg), cnv)
 	}
 	pos := fyne.CurrentApp().Driver().AbsolutePositionForObject(a)
 	a.dialog.ShowAtPosition(fyne.NewPos(pos.X+a.Size().Width/2-a.dialog.MinSize().Width/2, pos.Y+a.Size().Height))

@@ -606,7 +606,7 @@ func (s *SettingsDialog) openAutoEQBrowser(geq *GraphicEqualizer, debouncer func
 
 	// Show in a modal popup dialog
 	var popup *widget.PopUp
-	popup = widget.NewModalPopUp(browser.SearchDialog, s.window.Canvas())
+	popup = widget.NewModalPopUp(container.NewPadded(browser.SearchDialog), s.window.Canvas())
 
 	browser.SetOnProfileSelected(func(profile *backend.AutoEQProfile) {
 		s.applyAutoEQProfile(profile, geq, debouncer)
