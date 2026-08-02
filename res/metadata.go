@@ -2,6 +2,7 @@ package res
 
 const (
 	AppName          = "supersonic"
+	AppID            = "io.github.supersonic-app.supersonic"
 	DisplayName      = "Supersonic"
 	AppVersion       = "0.22.0"
 	AppVersionTag    = "v" + AppVersion
