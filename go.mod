@@ -1,4 +1,4 @@
-module github.com/dweymouth/supersonic
+module github.com/supersonic-app/supersonic
 
 go 1.24.0
 
