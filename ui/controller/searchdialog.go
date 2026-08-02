@@ -4,6 +4,7 @@ import (
 	"log"
 
 	"fyne.io/fyne/v2"
+	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
 	"github.com/dweymouth/supersonic/backend"
 	"github.com/dweymouth/supersonic/backend/mediaprovider"
@@ -13,7 +14,7 @@ import (
 
 func (c *Controller) ShowQuickSearch() {
 	qs := dialogs.NewQuickSearch(c.App.ServerManager.Server, c.App.ImageManager)
-	pop := widget.NewModalPopUp(qs.SearchDialog, c.MainWindow.Canvas())
+	pop := widget.NewModalPopUp(container.NewPadded(qs.SearchDialog), c.MainWindow.Canvas())
 	qs.SetOnDismiss(func() {
 		pop.Hide()
 		c.doModalClosed()
