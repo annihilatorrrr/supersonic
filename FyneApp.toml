@@ -2,7 +2,7 @@
   Icon = "res/appicon-512.png"
   Name = "Supersonic"
   ID = "io.github.supersonic-app.supersonic"
-  Version = "0.22.0"
+  Version = "0.22.1"
 
 [LinuxAndBSD]
   Categories = ["Audio", "AudioVideo"]

@@ -1,5 +1,24 @@
 # Change Log
 
+## [0.22.1]
+
+### Added
+- Added dock icon menu in MacOS
+
+### Changed
+- Github repo moved to supersonic-app organization
+- Updated Chinese and Turkish translations
+- [#1002](https://github.com/supersonic-app/supersonic/issues/1002) Hide MacOS dock icon when closing to system tray
+
+### Fixed
+- [#771](https://github.com/supersonic-app/supersonic/issues/771) Some authentication failures with Jellyfin
+- [#997](https://github.com/supersonic-app/supersonic/issues/997) Inconsistent character baseline with some CJK text
+- [#730](https://github.com/supersonic-app/supersonic/issues/730) Wayland: crash when "fn" key is pressed
+- [#977](https://github.com/supersonic-app/supersonic/issues/977) Wayland: Application tray icon shows multiple windows are open
+- Wayland: use app ID to help compositors match app icon to window
+- Shuffle control now exposed over MPRIS
+- Regression in context menus not showing up in dialogs
+
 ## [0.22.0]
 
 ### Added
