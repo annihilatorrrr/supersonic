@@ -28,8 +28,8 @@ github.com/dweymouth/fyne-advanced-list v0.0.0-20250211191927-58ea85eec72c h1:UX
 github.com/dweymouth/fyne-advanced-list v0.0.0-20250211191927-58ea85eec72c/go.mod h1:Idgzr4LYzve8IPHF1stLO1bdGQZnDKt/bT9WfJflCGw=
 github.com/dweymouth/fyne-tooltip v0.4.0 h1:ZkMhy4f8lHklyjNnKJlSEJ2pLPnYWVD7tu2+YEgmp+w=
 github.com/dweymouth/fyne-tooltip v0.4.0/go.mod h1:jXYbY561DTIXXqkauzltI3o/hsVaQd2KY8Ry2FXy7Xk=
-github.com/dweymouth/fyne/v2 v2.3.0-rc1.0.20260802230825-ecc82cb9584e h1:BjNHibPJ7UHyssGHNOAtQnaANf7yFgCI5hJhtFySvf8=
-github.com/dweymouth/fyne/v2 v2.3.0-rc1.0.20260802230825-ecc82cb9584e/go.mod h1:JGEhUzkvrySOqyhi1uSMjCl5yWX2Nn+tY/exBbFkpGw=
+github.com/dweymouth/fyne/v2 v2.3.0-rc1.0.20260809142433-9ca176ed4373 h1:mJ+A+gJDg/mCIDd1qgFBRBt4ls2sQ4np8IIgtx1YqxY=
+github.com/dweymouth/fyne/v2 v2.3.0-rc1.0.20260809142433-9ca176ed4373/go.mod h1:JGEhUzkvrySOqyhi1uSMjCl5yWX2Nn+tY/exBbFkpGw=
 github.com/dweymouth/go-jellyfin v0.0.0-20260422144755-ac6d50639b1a h1:+eCkDF2Os8Vr9MUM8Z0+JVw9Wq6hxcEyYyVCMrVYulo=
 github.com/dweymouth/go-jellyfin v0.0.0-20260422144755-ac6d50639b1a/go.mod h1:fcUagHBaQnt06GmBAllNE0J4O/7064zXRWdqnTTtVjI=
 github.com/dweymouth/go-wav v0.0.0-20250719173115-e60429a83eb0 h1:mYcctuWgVArHhSLJxndlUM43C3hoE18BLDBkXKM2tl0=
