@@ -108,6 +108,7 @@ else
   cp /usr/lib/x86_64-linux-gnu/libxml2.so.2 Supersonic.AppDir/usr/lib/ # CachyOS fix
   cp /usr/lib/x86_64-linux-gnu/libicuuc.so.70 Supersonic.AppDir/usr/lib/ # CachyOS fix
   cp /usr/lib/x86_64-linux-gnu/libicudata.so.70 Supersonic.AppDir/usr/lib/ # CachyOS fix
+  cp /usr/lib/x86_64-linux-gnu/libnettle.so.8 Supersonic.AppDir/usr/lib/
   set +x
 fi
 
